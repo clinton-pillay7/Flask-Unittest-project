@@ -4,6 +4,7 @@
 from flask import Flask
 from flask import jsonify, request
 import pymongo
+from bson import *
 
 clientconn = pymongo.MongoClient("mongodb://127.0.0.1:27017")
 mydb = clientconn.rabbit
