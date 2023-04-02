@@ -12,7 +12,7 @@ mycol = mydb.crud
 app = Flask(__name__)
 @app.route("/")
 def hello_world():
-	return "<p>hello world</p>"
+	return "hello world"
 
 @app.route("/users")
 def users():
