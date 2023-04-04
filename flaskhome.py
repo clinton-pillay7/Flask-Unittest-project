@@ -5,15 +5,19 @@ from flask import Flask
 from flask import jsonify, request
 import pymongo
 from bson import *
+import sys
 
 clientconn = pymongo.MongoClient("mongodb://127.0.0.1:27017")
 mydb = clientconn.rabbit
 mycol = mydb.crud
 
+
+
 app = Flask(__name__)
 @app.route("/")
 def hello_world():
-	return "hello world"
+	return "hello world" 
+#	return jsonify(status=200)
 
 @app.route("/users")
 def users():
